@@ -1,0 +1,30 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+
+	<div class="row">
+		<form class="col s12" method="POST">
+			{%csrf_token%}
+			<div class="row">
+				<div class="input-field col s6">
+          			<input id="username" type="text" class="validate" name="username">
+          			<label for="username">Nombre de usuario</label>
+        		</div>
+			</div>
+			<div class="row">
+        		<div class="input-field col s6">
+          		<input id="password" type="password" class="validate" name="password">
+          		<label for="password">Password</label>
+        		</div>
+      		</div>
+      		<div class="row">
+				<div class="input-field col s6">
+          			<a href="{% url 'password_reset' %}">Olvide mi contraseña</a>
+          			<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    					<i class="material-icons right">send</i>
+  					</button>
+        		</div>
+			</div>
+		</form>
+	</div>		
+{%endblock%}

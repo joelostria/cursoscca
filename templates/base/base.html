@@ -1,0 +1,91 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      
+	<link rel="stylesheet" type="text/css" href="{%static 'css/materialize.min.css' %}">
+	<title>{% block title %}Cursos CCA {%endblock%}</title>
+</head>
+<body>
+	{% block navbar %}
+	<nav class="">
+	    <div class="nav-wrapper grey darken-4 ">
+	      <a href="{%url 'inicio'%}" class="brand-logo"><img width="70%" height="80%" class="responsive-img" src="{%static 'img/cca.png'%}"></a>
+	      <ul id="nav-mobile" class="right hide-on-med-and-down">
+	        <li><a href="{%url 'inicio'%}">Inicio</a></li>
+	        <li><a href="{%url 'curso:index'%}">Cursos</a></li>
+	        <li><a href="{%url 'registrar:index'%}">Registro</a></li>
+	      </ul>
+	    </div>
+  	</nav>          				                        	
+    {% endblock %}
+    {%block parallax%}
+    	<input type="hidden" name="">
+    {%endblock%}
+	
+		
+	{% block header %}
+	<h4>Cabezera</h4>
+	{% endblock%}
+
+	{%block content%}
+	<h4>Contenido</h4>
+	{%endblock%}
+
+	
+    
+    {%block footer%}
+	<footer class="page-footer grey darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Centro comunitario de aprendizaje San Gabriel Azteca</h5>
+                <p class="grey-text text-lighten-4">Pagina diseñada para la promocion sobre el aprovechamiento de los espacios publicos en la localidad</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Enlaces</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="{%url 'registrar:index'%}">Registrate</a></li>
+                  <li><a class="grey-text text-lighten-3" href="{%url 'curso:index'%}">Temario</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.microrregiones.gob.mx/cca.php">¿Que es un CCA?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="http://www.stargo.com">Proveedor de internet</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Azteca Software
+            <a class="grey-text text-lighten-4 right" href="http://www.sct.gob.mx">SCT</a>
+            </div>
+          </div>
+        </footer>
+	{%endblock%}
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="{%static 'js/materialize.js'%}"></script> 
+    <script type="text/javascript">
+    	$(document).ready(function() {
+    		M.updateTextFields();
+    		$('.parallax').parallax();
+    		$('.slider').slider();
+    	$('input#input_text, textarea#textarea2').characterCounter();
+
+    	$('input[type=checkbox]').live('click', function(){
+        var parent = $(this).parent().attr('id');
+        $('#'+parent+' input[type=checkbox]').removeAttr('checked');
+        $(this).attr('checked', 'checked');
+    });
+ 			 });
+    </script>
+    <script type="text/javascript">
+    	document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, options);
+  });
+    </script>
+
+	
+</body>
+</html>

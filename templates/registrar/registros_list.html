@@ -1,0 +1,40 @@
+{%extends 'base/base.html'%}
+
+{%block content%}
+
+	<table class="centered">
+		<thead>
+			<tr>
+				<td>#</td>
+				<td>Nombre</td>
+				<td>Apellidos</td>
+				<td>Edad</td>
+				<td>Telefono</td>
+				<td>Email</td>
+				<td>Computadora</td>
+				<td>Opciones</td>
+			</tr>
+		</thead>
+		<tbody>
+			{%if object_list%}
+			{%for registro in object_list%}
+			<tr>
+				<td>{{registro.id}}</td>
+				<td>{{registro.nombre}}</td>
+				<td>{{registro.apellidos}}</td>
+				<td>{{registro.edad}}</td>
+				<td>{{registro.telefono}}</td>
+				<td>{{registro.email}}</td>
+				<td>{{registro.computadora}}</td>
+				<td><a class="waves-effect waves-light indigo darken-3 btn" href="{% url 'registrar:editar_registro' registro.id%}">Editar</a>
+					<a class="waves-effect waves-light red darken-3 btn" href="{% url 'registrar:eliminar_registro' registro.id%}">Eliminar</a>
+				</td>
+				</tr>
+
+			{%endfor%}
+			{%else%}
+				<h1>No hay registros</h1>
+			{%endif%}
+		</tbody>
+	</table>
+{%endblock%}

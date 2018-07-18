@@ -1,0 +1,38 @@
+{%extends 'base/base.html' %}
+
+{%block header%}
+<h1 class="red-text center">Cursos</h1>
+{%endblock%}
+
+{% block content%}
+
+
+<div class="container">
+	<div class="section">
+		<div class="row col s12" >
+			{%if object_list%}
+			{%for curso in object_list%}
+			<div class="col s12 m3">
+				<div class="card  white">
+					<div class="card-image">
+						<img src="/cursos{{curso.imagen.url}}">
+					</div>
+					<div class="card-content center">
+						<span class="card-title red-text">{{curso.nombre}}</span>
+						<p>{{curso.descripcion}}</p>
+					</div>
+				</div>
+			</div>
+			{%endfor%}
+			{%else%}
+				<h1>No hay registros</h1>
+			{%endif%}
+		</div>
+	</div>
+</div>
+{% endblock %}
+<div class="card-content proposal grey-text center" style="height: 399px; min-height: 360px; overflow-y: hidden; margin-bottom: 18px;">
+		                      	<div class="icon-preview col s12" style="margin-bottom: 12px;"><img src="/default/materialize/images/icons/politicaygobierno.png" alt="" class="responsive-img col s4 offset-s4"></div>
+		                        <span class="card-title red-text">Política y Gobierno</span>
+		                        <p>El estado puede recuperarse para ser el principal impulsor del desarrollo. Proponemos un gobierno democrático y austero que esté al servicio de las personas y su bienestar. Queremos un país digno hacia dentro y hacia afuera.</p>
+		                      </div>

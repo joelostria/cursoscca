@@ -1,0 +1,114 @@
+{%extends 'base/base.html'%}
+{%load staticfiles%}
+{%block header%}
+{%endblock%}
+{%block content%}
+{%endblock%}
+{%block parallax%}
+
+	<div id="index-banner" class="parallax-container">
+	    <div class="section no-pad-bot">
+	    	<div class="container">
+		        <br><br>
+		        <h1 class="header center  light-blue-text text-lighten-5 " style="font-size: 6.2rem;">Bienvenido!!!</h1>
+		        <div class="row center">
+		          <h5 class="header col s12 white-text">Estas a un paso de aprender cosas fascinantes sobre tecnologia</h5>
+		        </div>
+		        <div class="row center">
+		          <a href="{%url 'registrar:index'%}" id="download-button" class="btn-large waves-effect waves-light light-blue darken-4">Registrate</a>
+		        </div>
+		        <br><br>
+
+	    	</div>
+	    </div>
+	    <div class="parallax">
+	    	<img src="{%static 'img/info3.jpg'%}" alt="Unsplashed background img 1">
+	    </div>
+    </div>
+    
+
+<div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="material-icons large">important_devices</i></h2>
+            <h5 class="center">Aprende a desarrollar aplicaciones</h5>
+
+            <p class="light">Aprende a crear aplicaciones para computadoras, smatphones,paginas web. Desarrolla tus ideas y ponte a prueba</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="large material-icons">public</i></h2>
+            <h5 class="center">Aprende sobre internet</h5>
+
+            <p class="light">Aprende como funciona la Internet, crea tus propias redes,descubre como investigar y como confiar en los sitios de internet,¿Navegacion segura? te explicamos las mejores formas de hacerlo</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center black-text"><i class="large material-icons">description</i></h2>
+            <h5 class="center">Ofimatica</h5>
+
+            <p class="light">Te enseñamos a crear documentos profesionales, presentaciones innovadoras, mejor uso de las hojas de calculo, formatos, etc. </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+
+    <div class="parallax-container">
+    	<div class="container">
+    		<br><br>
+		        <h1 class="header center light-blue-text text-darken-4" style="font-size: 4.2rem;">Aprende cosas nuevas y desarrolla tu creatividad</h1>
+		        <div class="row center">
+		          <h5 class="header col s12 black-text">Desarrolla nuevas habilidades computacionales con los fascinantes temas que tenemos para ti</h5>
+		        </div>
+		        <div class="row center">
+		          <a href="{%url 'curso:index'%}" id="download-button" class="btn-large waves-effect waves-light light-blue darken-4">Temario</a>
+		        </div>
+		    <br><br>
+    	</div>
+      <div class="parallax">
+      	<img src="{%static 'img/niños.jpeg'%}">
+      </div>
+    </div>
+
+
+    <div class="container">
+	    <div class="section">
+
+	      <div class="row">
+	        <div class="col s12 center">
+	          <h3><i class="mdi-content-send brown-text"></i></h3>
+	          <h4>Proposito de los cursos</h4>
+	          <p class="left-align light">El proposito principal de estos cursos es aprovechar al maximo los recursos tecnologicos con los que se cuenta en la comunidad teniendo como medio el Centro Comunitario de Aprendizaje de la localidad. Ademas de fomentar en las nuevas generaciones el uso y aprovechamiento al maximo de la tecnologia. Todo esto con el objetivo de obtener beneficios economicos para poner en marcha el CCA de San Gabriel Azteca obteniendo nuevo mobiliario.</p>
+	        </div>
+	      </div>
+
+	    </div>
+  	</div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 center light">CCA</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="{%static 'img/cca2.png'%}" alt="Unsplashed background img 3"></div>
+  </div>
+
+
+{%endblock%}
+

@@ -1,0 +1,33 @@
+{%extends 'base/base.html'%}
+{%block content%}
+
+<table class="centered">
+		<thead>
+			<tr>
+				<td>#</td>
+				<td>Nombre</td>
+				<td>Descripcion</td>
+				<td>Imagen</td>
+			</tr>
+		</thead>
+		<tbody>
+			{%if object_list%}
+			{%for curso in object_list%}
+			<tr>
+				<td>{{curso.id}}</td>
+				<td>{{curso.nombre}}</td>
+				<td>{{curso.descripcion}}</td>
+				<td><img height="50px" src="/cursos{{curso.imagen.url}}"> </td>
+				
+				
+				</td>
+				</tr>
+
+			{%endfor%}
+			{%else%}
+				<h1>No hay registros</h1>
+			{%endif%}
+		</tbody>
+	</table>
+
+{%endblock%}

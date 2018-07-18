@@ -1,0 +1,29 @@
+{%extends 'base/base.html' %}
+
+{%block content%}
+
+<div class="row">
+    <form class="col s12" method="POST">
+    	{%csrf_token%}
+	    <div class="row">
+	        <div class="input-field col s12">
+	        	<h3>Desea eliminar el alumno? {{object.nombre}}</h3>
+	        </div>
+	    </div>
+	    <button class="btn waves-effect waves-light" type="submit" name="action">Si, eliminar
+    		<i class="material-icons right">send</i>
+  		</button>
+  		<a href="{%url 'registrar:listar_registro'%}">Cancelar</a>
+    </form>
+</div>
+
+
+<!--
+	<form method="POST">
+		#{%csrf_token%}
+		#{{form.as_p}}
+		<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+    		<i class="material-icons right">send</i>
+  		</button>
+	</form>-->
+{%endblock%}
